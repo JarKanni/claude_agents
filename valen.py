@@ -15,7 +15,7 @@ from claude_agent_sdk import (
 conversation_file = None
 
 def log_print(*args, console=True, **kwargs):
-    """Print to console AND/OR write to conversation.txt"""
+    """Print to console AND/OR write to conversation_valen.txt"""
     # Print to console only if console=True
     if console:
         print(*args, **kwargs)
@@ -159,7 +159,7 @@ async def main():
     global conversation_file
     
     # Open the file in append mode
-    conversation_file = open('conversation.txt', 'a', encoding='utf-8')
+    conversation_file = open('conversation_valen.txt', 'a', encoding='utf-8')
     
     try:
         await chat_loop()
